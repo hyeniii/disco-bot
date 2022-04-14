@@ -39,6 +39,6 @@ module.exports = {
         사람: ${convertEmoji(human)} : vs 봇: ${convertEmoji(bot)}
         ${winner === '비김' ? '우리는 비겼다 인간.' : winner + '의 승리!'}
         `
-		await interaction.reply(result);;
+		await interaction.reply(result);
 	},
 };
