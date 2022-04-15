@@ -1,6 +1,6 @@
 // Require the necessary discord.js classes
-const { Client, Collection, Intents } = require('discord.js');
-const { token } = require('./config.json');
+const { Client, Collection, Intents, Message } = require('discord.js');
+const { prefix, token } = require('./config.json');
 const fs = require('fs');
 
 // Create a new client instance
@@ -23,8 +23,6 @@ client.once('ready', () => {
 
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
-	// if (interaction.author.bot) return;
-	// if (interaction.author.id === client.user.id) return;
 
     const command = client.commands.get(interaction.commandName);
 

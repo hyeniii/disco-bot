@@ -11,10 +11,6 @@ for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
 	commands.push(command.data.toJSON());
 }
-// const commands = [
-// 	new SlashCommandBuilder().setName('야').setDescription('호~라고 대답합니다!'),
-// ]
-// 	.map(command => command.toJSON());
 
 const rest = new REST({ version: '9' }).setToken(token);
 
